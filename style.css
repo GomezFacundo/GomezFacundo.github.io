@@ -1,0 +1,32 @@
+img{
+    display:block;
+    margin:auto;
+    }
+
+body {  background-color: rgba(44, 18, 3, 0.911)}
+
+body{ text-align: center}
+
+body {color: rgb(234, 138, 82);
+
+}
+
+table { margin: auto} 
+
+.caja { 
+    width: 550px;
+    margin:auto;
+    font-family: sans-serif; 
+    font-size: 50px; 
+    color:rgba(221, 112, 70, 0.87);
+    background:#793406
+}
+
+h2 { 
+    width: 300px;
+    margin:auto;
+    font-family: sans-serif; 
+    font-size: 30px; 
+    color: rgba(221, 112, 70, 0.87); 
+    background:#793406
+     }
