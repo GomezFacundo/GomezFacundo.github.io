@@ -1,0 +1,47 @@
+
+   .cuerpo{   background-color: #414D68;
+              color: antiquewhite;
+   }
+   
+   
+   .carousel-inner  .item  img,
+     .carousel-inner .item  a img {
+       width: 800px;
+       margin: auto;
+     }
+   
+     .logo{
+      text-align: left; 
+      font-family: Comic Sans MS; 
+      font-weight:bold; 
+      font-size: 45px; 
+      color: #EBD758; 
+      text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68;
+      }
+
+
+     header { background-color: burlywood;
+      padding: 30px;}
+     
+
+    .menu{ background-color: #D35400  ;
+        
+         
+    }
+
+   .menu li {  list-style: none;   
+                display: inline-block;
+                font:  14px;
+                padding: 10px;
+                color: #414D68; 
+                  
+            }
+
+  
+  .name{ text-align: center;        
+
+  }     
+    
+    
+
+    
