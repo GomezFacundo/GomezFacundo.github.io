@@ -1,0 +1,46 @@
+.carousel-inner img {
+    width: 800px;
+    max-height: 500px;
+    
+    
+}
+
+
+.carousel-inner{
+  margin-top: 100px;   
+}
+
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: rgb(1, 144, 180);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    
+}
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  #contact { padding-left: 40px;
+             border: 0px;
+             background: none; 
+             font-size: 20px; 
+             padding-top: 30px;  }
+
+
+
+
+  .modal-content { background-color: white;
+                   height:102px;  
+                   width: 320px;  }
+
+  
