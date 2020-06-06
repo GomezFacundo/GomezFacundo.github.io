@@ -15,6 +15,7 @@ body { background-color: #DDD76E}
     text-shadow: 0 1px 0 #DDD76E, 0 2px 0 #DDD76E, 0 3px 0 #DDD76E, 0 4px 0 #DDD76E, 0 5px 0 #DDD76E, 0 6px 1px rgba(1, 0, 10, 0.219), 0 0 5px rgba(0, 0, 0, 0.295), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
     margin-bottom: 20px;
      }
+    
 
 .parrafo2 { text-align: center; 
      color:rgb(5, 2, 53);
@@ -31,31 +32,19 @@ table {margin: auto;
 
 
 .contenido1 { text-align: center;  
-            width: 1300px;  
-           height: 1200px;
-          margin: auto;
-          margin-top: 10px;
-           padding-top: 20px;
-         background-color: rgb(206, 199, 70);
-           border-radius: 10px;              }
+              width: 1300px;  
+              height: 1100px;
+              margin: auto;
+              margin-top: 116px;
+              padding-top: 20px;
+              background-color: rgb(206, 199, 70);
+              border: solid rgb(99, 65, 26) 5px;
+              border-radius: 10px;
+           
+                      }
 
-  .contenido2 { text-align: center;  
-    width: 1200px;  
-    height: 400px;
-    margin: auto; 
-    margin-top: 30px;
-    padding-top: 20px;
-    background-color: rgb(206, 199, 70); 
-    border-radius: 10px;                               }
 
-   .contenido3 { text-align: center;  
-    width: 1200px;  
-    height: 400px;
-    margin: auto; 
-    margin-top: 30px;
-    padding-top: 20px;
-    background-color: rgb(206, 199, 70); 
-    border-radius: 10px;                               }                                
-  
     footer { text-align: center;  
-        background-color: rgb(197, 204, 103);}
+             background-color: #DDD76E;
+          
+               }     
