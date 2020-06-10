@@ -26,7 +26,7 @@
     </div>
   </nav>
 
-  <h1 class="titulo">Reservas</h1>
+  <h1 id="titulo" class="titulo">Reservas</h1>
 
 
 
@@ -50,26 +50,38 @@
               min="2020-01-01" max="2021-12-31">
 
  
- <label for="Habitaciones">Habitaciones  </label> 
-     <select name="Habitaciones">
+ <label for="habitaciones"> Habitaciones   </label> 
+     <select id="habitaciones">
 
-     <option>Habitacion Individual</option>           
+     <option value="h-1">Habitacion Individual</option>           
              
-    <option>Habitacion Doble</option>            
+    <option value="h-2">Habitacion Doble</option>            
        
-    <option>Multiples Habitaciones</option>
+    <option value="h-3">Multiples Habitaciones</option>
                 
      </select>
       
       <br>
       <br>
       <br>
-     <button>RESERVAR </button>
+    
+     <input type="button" onclick="reserva()"> 
 
     </div>
 
 <footer>Reservas: 0800 555 0344 | (+54) 0341 4258666 </footer>
 
+<script>
+
+function reserva() {
+var hab = document.getElementById ("habitaciones").value; 
+if (hab == "h-1") { alert ('son 200 pesos papa') }
+if (hab == "h-2") { alert ('son 400 pesos papa') }
+else 
+if (hab == "h-3") { alert ('son 500 pesos papa')  }
+}
+
+</script>
  
 
  </body>
