@@ -30,13 +30,8 @@
 
 
 
-<div class="contenido">
-
-
- 
-
-
-<label for="start">Fecha de llegada:</label>
+<div class="contenido" >
+  <label for="start">Fecha de llegada:</label>
 
 <input type="date" id="start" name="trip-start"
        value="2020-07-22"
@@ -65,9 +60,11 @@
       <br>
       <br>
     
-     <input type="button" onclick="reserva()"> 
+     <input type="button" value="Reservar" onclick="reserva()" class="btn-reserva" id="reserva"> 
 
-    </div>
+<h1 id="contenido" ></h1>
+
+ </div>
 
 <footer>Reservas: 0800 555 0344 | (+54) 0341 4258666 </footer>
 
@@ -75,13 +72,20 @@
 
 function reserva() {
 var hab = document.getElementById ("habitaciones").value; 
-if (hab == "h-1") { alert ('son 200 pesos') }
-if (hab == "h-2") { alert ('son 400 pesos') }
-if (hab == "h-3") { alert ('son 500 pesos')  }
-}
+document.getElementById ("reserva").style.display="none";
+if (hab == "h-1") { document.getElementById('contenido').innerHTML="<h3 class='titulo1'> Su reserva tiene un costo de $500 </h3> <br> <a href='reservas.html'> <input type='button' value='Cancelar' class='btn-cancelar'  > </a>  <input type='button' value='Continuar' class='btn-continuar' >" ; }
+if (hab == "h-2") { document.getElementById('contenido').innerHTML="<h3 class='titulo1'> Su reserva tiene un costo de $500 </h3> <br> <a href='reservas.html'> <input type='button' value='Cancelar' class='btn-cancelar'  > </a> <input type='button' value='Continuar' class='btn-continuar' >" ; }
+if (hab == "h-3") { document.getElementById('contenido').innerHTML=" <label for='cantidad'> Seleccione la cantidad </label>  <select> <option value='c-1'>opcion1</option> <option value='c-2'>opcion2</option> <option value='c-3'>opcion4</option>  </select>";}     
 
+}
+                                                                              
 </script>
  
 
  </body>
  </html>
+
+
+
+
+ 
