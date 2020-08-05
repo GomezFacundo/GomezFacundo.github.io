@@ -1,4 +1,7 @@
-.navbar {  background-color: #BA6F1B !important;
+* {margin: 0;
+    padding: 0; }
+
+  .navbar {  background-color: #BA6F1B !important;
     padding-bottom: 30px !important ;
     opacity: 0.9;
 }
@@ -13,26 +16,21 @@ body { background-color: #DDD76E;
     font-size: 50px; 
     color: rgb(3, 1, 31); 
     text-shadow: 0 1px 0 #DDD76E, 0 2px 0 #DDD76E, 0 3px 0 #DDD76E, 0 4px 0 #DDD76E, 0 5px 0 #DDD76E, 0 6px 1px rgba(1, 0, 10, 0.219), 0 0 5px rgba(0, 0, 0, 0.295), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
-    margin-bottom: -30px; }
+    padding-top:120px ;
+    margin-bottom: -150px; }
 
-    .titulo1 {
-        text-align: center;
-        font-family: Arial Black; 
-        font-weight: bold; 
-        font-size: 30px; 
-        color: rgb(3, 1, 31); 
-        text-shadow: 0 1px 0 #DDD76E, 0 2px 0 #DDD76E, 0 3px 0 #DDD76E, 0 4px 0 #DDD76E, 0 5px 0 #DDD76E, 0 6px 1px rgba(1, 0, 10, 0.219), 0 0 5px rgba(0, 0, 0, 0.295), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
-        margin-bottom: -30px; }
+ 
 
 .contenido { text-align: center;  
-             width: 1000px;  
-             height: 440px;
+             width: 900px;  
+             height: 370px;
              margin: auto; 
              margin-top: 30px;
              padding-top: 20px;
              background-color: rgb(206, 199, 70); 
              border-radius: 10px; 
-             border: solid rgb(99, 65, 26) 5px;                              }
+             border: solid rgb(99, 65, 26) 5px;   
+                            }
 
 
   .btn-reserva { width: 90px; height: 30px ;        }
@@ -41,3 +39,47 @@ body { background-color: #DDD76E;
 
     footer { text-align: center;  
         background-color: #DDD76E;}
+
+       
+       
+
+
+        #modal {  width: 100%;
+            height: 100%;
+            position: fixed;
+             background: rgba(0,0,0,0.8);
+          top: 0;
+          left: 0;
+          display: none;
+          animation: modal 1s 1s forwards;
+          visibility: hidden;
+          opacity: 0;
+           
+                         }
+      
+      
+      .content{ margin: auto;
+               width: 30%;
+               height: 40%;
+               background: white;       
+               border-radius: 10px   }
+      
+      #cerrar {  display: none;  }
+      
+      #btn-cerrar { color: tomato; 
+               z-index: 50;
+             
+               width: 40px;
+               height: 40px;
+               border-radius: 50%;
+               line-height: 40px;
+               font-size: 25px;
+               cursor: pointer;
+               float: right;    }
+    
+    .contenedor {padding-top: 150px;  
+                   } 
+        
+        
+     @keyframes modal { 100% {  visibility: visible;
+      opacity: 1;     }            }

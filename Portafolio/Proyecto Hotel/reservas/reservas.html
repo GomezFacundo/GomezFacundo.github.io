@@ -2,14 +2,16 @@
  <html lang="en">
  <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="reservas.css">
+   <link rel="stylesheet" href="reservas.css"> 
+   <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+   <link rel="stylesheet" media="only screen and (max-width: 768px)" href="estilos.css">
    <title>Ariston Hotel</title>
  </head>
  <body>
-  
-  <nav class="navbar navbar-expand-lg navbar-light ">
+          
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <a class="navbar-brand" > <img src="../img/logo.png" > </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -28,9 +30,9 @@
 
   <h1 id="titulo" class="titulo">Reservas</h1>
 
+<div class="contenedor">
 
-
-<div class="contenido" >
+  <div class="contenido" >
   <label for="start">Fecha de llegada:</label>
 
 <input type="date" id="start" name="trip-start"
@@ -60,27 +62,41 @@
       <br>
       <br>
     
-     <input type="button" value="Reservar" onclick="reserva()" class="btn-reserva" id="reserva"> 
+     <input type="button" value="Reservar" class="btn-reserva" id="reserva" onclick="abrirmodal()" > 
+    
+    </div>
+  
 
-<h1 id="contenido" ></h1>
 
- </div>
+<input type="checkbox"  id="cerrar"> 
+<div id="modal" > 
+    <div class="content">
+      <label for="cerrar" id="btn-cerrar"  onclick="window.location.reload();" >  X </label>  
+    <h1> </h1>  
+    
+    </div>
+</div> 
+  
+
+
 
 <footer>Reservas: 0800 555 0344 | (+54) 0341 4258666 </footer>
 
 <script>
+function abrirmodal() 
+{ document.getElementById("modal").style.display="flex"; }
 
+/*
 function reserva() {
 var hab = document.getElementById ("habitaciones").value; 
 document.getElementById ("reserva").style.display="none";
 if (hab == "h-1") { document.getElementById('contenido').innerHTML="<h3 class='titulo1'> Su reserva tiene un costo de $500 </h3> <br> <a href='reservas.html'> <input type='button' value='Cancelar' class='btn-cancelar'  > </a>  <input type='button' value='Continuar' class='btn-continuar' >" ; }
 if (hab == "h-2") { document.getElementById('contenido').innerHTML="<h3 class='titulo1'> Su reserva tiene un costo de $500 </h3> <br> <a href='reservas.html'> <input type='button' value='Cancelar' class='btn-cancelar'  > </a> <input type='button' value='Continuar' class='btn-continuar' >" ; }
 if (hab == "h-3") { document.getElementById('contenido').innerHTML=" <label for='cantidad'> Seleccione la cantidad </label>  <select> <option value='c-1'>opcion1</option> <option value='c-2'>opcion2</option> <option value='c-3'>opcion4</option>  </select>";}     
-
-}
-                                                                              
+  */
+                                                  
 </script>
- 
+
 
  </body>
  </html>
@@ -88,4 +104,3 @@ if (hab == "h-3") { document.getElementById('contenido').innerHTML=" <label for=
 
 
 
- 

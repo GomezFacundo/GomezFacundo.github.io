@@ -1,3 +1,8 @@
+* {margin: 0;
+    padding: 0; }
+
+
+
 .navbar {  background-color: #BA6F1B !important;
                            padding-bottom: 30px !important ;
                            opacity: 0.9;
@@ -18,8 +23,8 @@
   
   
   .parrafo2 {  color:rgb(5, 2, 53);
-     
-      font-size: 20px; }
+               font-size: 20px;
+               min-width: 300px; }
 
 
    .bienvenidos { 
@@ -57,15 +62,14 @@ text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 
       height: 100%;
       position: fixed;
        background: rgba(0,0,0,0.8);
-    top: 0;
-    left: 0;
-    display: flex;
-    animation: modal 1s 1s forwards;
-    visibility: hidden;
-    opacity: 0;
-     
-                   }
-
+      top: 0;
+      left: 0;
+      display: flex;
+      animation: modal 1s 1s forwards;
+      visibility: hidden;
+      opacity: 0;}
+      
+.contenedor  { flex-wrap: wrap;  }
 
 .content{ margin: auto;
          width: 30%;
