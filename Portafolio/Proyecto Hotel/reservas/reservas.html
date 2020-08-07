@@ -63,6 +63,11 @@
     
      <input type="button" value="Reservar" class="btn-reserva" id="reserva" onclick="abrirmodal()" > 
     
+    <br>
+     <br>
+    <br>
+     <section> </section>
+
     </div>
   
 
@@ -89,16 +94,10 @@
 function abrirmodal() 
 { document.getElementById("modal").style.display="flex"; }
 
-/*
-function reserva() {
-var hab = document.getElementById ("habitaciones").value; 
-document.getElementById ("reserva").style.display="none";
-if (hab == "h-1") { document.getElementById('contenido').innerHTML="<h3 class='titulo1'> Su reserva tiene un costo de $500 </h3> <br> <a href='reservas.html'> <input type='button' value='Cancelar' class='btn-cancelar'  > </a>  <input type='button' value='Continuar' class='btn-continuar' >" ; }
-if (hab == "h-2") { document.getElementById('contenido').innerHTML="<h3 class='titulo1'> Su reserva tiene un costo de $500 </h3> <br> <a href='reservas.html'> <input type='button' value='Cancelar' class='btn-cancelar'  > </a> <input type='button' value='Continuar' class='btn-continuar' >" ; }
-if (hab == "h-3") { document.getElementById('contenido').innerHTML=" <label for='cantidad'> Seleccione la cantidad </label>  <select> <option value='c-1'>opcion1</option> <option value='c-2'>opcion2</option> <option value='c-3'>opcion4</option>  </select>";}     
-  */
 
-    const header = document.querySelector('header');
+  /*<-- clima -->*/
+  
+    const header = document.querySelector('section');
     const section = document.querySelector('section');
 
     const requestURL = 'https://ws.smn.gob.ar/map_items/forecast/1';
@@ -107,27 +106,52 @@ if (hab == "h-3") { document.getElementById('contenido').innerHTML=" <label for=
     request.responseType = 'json';
     request.send();
     
+
     request.onload = function() {
       const localidades = request.response;
       var dia;
+      var tituloheader ; // Nombre de la Ciudad
+      var pronostico   ; // pronostico  
+      
       for(var i=0; i <= 200; i++ )
         {
         if(localidades[i]['name']=="Rosario")
           {
           //  console.log(localidades[i]['name']);
             dia=localidades[i]['weather'];
-            console.log(localidades[i]['name']);
-            console.log(dia['morning_desc']);
-            
+          //  console.log(localidades[i]['name']);
+          //  console.log(dia['morning_desc']);  // DESCRIPCION CLIMA
+          tituloheader = localidades[i]['name'];
+          pronostico =  dia['morning_desc']; 
 
           }
         }
-      
+      //  populateHeader(superHeroes);  <-- LLENAR HEADER
+      //  showHeroes(superHeroes);      <-- LLENAR SECTION
+      llenarheader(tituloheader) ;
+      llenarsection(pronostico);  
     }
     
- 
-                                                  
-</script>
+    function llenarheader(tituloheader){
+        const encabezado = document.createElement("article");
+        const myPara1 = document.createElement('p');
+        
+        myPara1.textContent = 'Clima en ' + tituloheader;
+        encabezado.appendChild(myPara1);
+        header.appendChild(encabezado);
+        
+    }
+
+    function llenarsection(pronostico){
+        const seccion = document.createElement("article");
+        const myPara2 = document.createElement('p');
+        myPara2.textContent = pronostico;
+        seccion.appendChild(myPara2);
+        section.appendChild(seccion);
+
+    }
+
+  </script>
 
 
  </body>
