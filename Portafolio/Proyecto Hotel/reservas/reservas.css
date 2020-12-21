@@ -7,7 +7,7 @@
 }
 
 body { background-color: #DDD76E;
-        align-content: center;} 
+        } 
 
 .titulo {
     text-align: center;
@@ -21,19 +21,12 @@ body { background-color: #DDD76E;
 
  
 
-.contenido { text-align: center;  
-             width: 900px;  
-             height: 370px;
-             margin: auto; 
-             margin-top: 30px;
-             padding-top: 20px;
-             background-color: rgb(206, 199, 70); 
-             border-radius: 10px; 
-             border: solid rgb(99, 65, 26) 5px;   
-                            }
+          
 
 
-  .btn-reserva { width: 90px; height: 30px ;        }
+  .btn-reserva { width: 200px; height: 30px; 
+                 margin-left: 578px;
+             }
   .btn-cancelar { width: 90px; height: 30px ; font-size: 17px;  }
   .btn-continuar {width: 90px; height: 30px ; font-size: 17px;  }
 
@@ -77,9 +70,13 @@ body { background-color: #DDD76E;
                cursor: pointer;
                float: right;    }
     
-    .contenedor {padding-top: 150px;  
-                   } 
+    .calendar { margin-top: 200px;          
+                margin-left: 230px;  } 
         
-        
+    .climaRos { text-align: center;
+              
+
+    }    
+
      @keyframes modal { 100% {  visibility: visible;
       opacity: 1;     }            }

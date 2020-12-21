@@ -1,102 +1,103 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="reservas.css"> 
-   <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
-   <title>Ariston Hotel</title>
- </head>
- <body>
-          
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="reservas.css">
+  <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+  <title>Ariston Hotel</title>
+</head>
+
+<body>
+
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <a class="navbar-brand"  href="../principal/index.html" > <img src="../img/logo.png" > </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="../principal/index.html"> <img src="../img/logo.png"> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="../principal/index.html">Volver a la Pagina Principal <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../principal/index.html">Volver a la Pagina Principal <span
+              class="sr-only">(current)</span></a>
         </li>
-      
+
       </ul>
-     
+
     </div>
   </nav>
 
   <h1 id="titulo" class="titulo">Reservas</h1>
 
-<div class="contenedor">
+  <div class="calendar">
 
-  <div class="contenido" >
-  <label for="start">Fecha de llegada:</label>
+    <label for="start">Fecha de llegada:</label>
 
-<input type="date" id="start" name="trip-start"
-       value="2020-07-22"
-       min="2020-01-01" max="2021-12-31">
+    <input type="date" id="start" name="trip-start" value="2020-07-22" min="2020-01-01" max="2021-12-31">
 
 
-       <label for="end">Fecha de salida:</label>
+    <label for="end">Fecha de salida:</label>
 
-       <input type="date" id="start" name="trip-start"
-              value="2020-07-22"
-              min="2020-01-01" max="2021-12-31">
-
- 
- <label for="habitaciones"> Habitaciones   </label> 
-     <select id="habitaciones">
-
-     <option value="h-1">Habitacion Individual</option>           
-             
-    <option value="h-2">Habitacion Doble</option>            
-       
-    <option value="h-3">Multiples Habitaciones</option>
-                
-     </select>
-      
-      <br>
-      <br>
-      <br>
-    
-     <input type="button" value="Reservar" class="btn-reserva" id="reserva" onclick="abrirmodal()" > 
-    
-    <br>
-    <br>
-    <br>
-     <section> </section>
-
-    </div>
-  
+    <input type="date" id="start" name="trip-start" value="2020-07-22" min="2020-01-01" max="2021-12-31">
 
 
-<input type="checkbox"  id="cerrar"> 
-<div id="modal" > 
+
+    <label for="habitaciones"> Habitaciones </label>
+    <select id="habitaciones">
+
+      <option value="h-1">Habitacion Individual</option>
+
+      <option value="h-2">Habitacion Doble</option>
+
+      <option value="h-3">Multiples Habitaciones</option>
+
+    </select>
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <input type="button" value="Reservar" class="btn-reserva" id="reserva" onclick="abrirmodal()">
+
+  <br>
+  <br>
+  <br>
+  <section class="climaRos" > </section>
+
+
+
+
+
+  <input type="checkbox" id="cerrar">
+  <div id="modal">
     <div class="content">
-      <label for="cerrar" id="btn-cerrar"  onclick="window.location.reload();" >  X </label>  
-    <h1> </h1>  
-    
+      <label for="cerrar" id="btn-cerrar" onclick="window.location.reload();"> X </label>
+      <h1> </h1>
+
     </div>
-</div> 
-  
-
-
-
-<footer>Reservas: 0800 555 0344 | (+54) 0341 4258666 </footer>
+  </div>
 
 
 
 
-
-<script>
-function abrirmodal() 
-{ document.getElementById("modal").style.display="flex"; }
+  <footer>Reservas: 0800 555 0344 | (+54) 0341 4258666 </footer>
 
 
-  /*<-- clima -->*/
-  
+
+
+
+  <script>
+    function abrirmodal() { document.getElementById("modal").style.display = "flex"; }
+
+
+    /*<-- clima -->*/
+
     const header = document.querySelector('section');
     const section = document.querySelector('section');
 
@@ -105,58 +106,53 @@ function abrirmodal()
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
-    
 
-    request.onload = function() {
+
+    request.onload = function () {
       const localidades = request.response;
       var dia;
-      var tituloheader ; // Nombre de la Ciudad
-      var pronostico   ; // pronostico  
-      
-      for(var i=0; i <= 200; i++ )
-        {
-        if(localidades[i]['name']=="Rosario")
-          {
+      var tituloheader; // Nombre de la Ciudad
+      var pronostico; // pronostico  
+
+      for (var i = 0; i <= 200; i++) {
+        if (localidades[i]['name'] == "Rosario") {
           //  console.log(localidades[i]['name']);
-            dia=localidades[i]['weather'];
+          dia = localidades[i]['weather'];
           //  console.log(localidades[i]['name']);
           //  console.log(dia['morning_desc']);  // DESCRIPCION CLIMA
           tituloheader = localidades[i]['name'];
-          pronostico =  dia['morning_desc']; 
+          pronostico = dia['morning_desc'];
 
-          }
         }
+      }
       //  populateHeader(superHeroes);  <-- LLENAR HEADER
       //  showHeroes(superHeroes);      <-- LLENAR SECTION
-      llenarheader(tituloheader) ;
-      llenarsection(pronostico);  
-    }
-    
-    function llenarheader(tituloheader){
-        const encabezado = document.createElement("article");
-        const myPara1 = document.createElement('p');
-        
-        myPara1.textContent = 'Clima en ' + tituloheader;
-        encabezado.appendChild(myPara1);
-        header.appendChild(encabezado);
-        
+      llenarheader(tituloheader);
+      llenarsection(pronostico);
     }
 
-    function llenarsection(pronostico){
-        const seccion = document.createElement("article");
-        const myPara2 = document.createElement('p');
-        myPara2.textContent = pronostico;
-        seccion.appendChild(myPara2);
-        section.appendChild(seccion);
+    function llenarheader(tituloheader) {
+      const encabezado = document.createElement("article");
+      const myPara1 = document.createElement('p');
+
+      myPara1.textContent = 'Clima en ' + tituloheader;
+      encabezado.appendChild(myPara1);
+      header.appendChild(encabezado);
+
+    }
+
+    function llenarsection(pronostico) {
+      const seccion = document.createElement("article");
+      const myPara2 = document.createElement('p');
+      myPara2.textContent = pronostico;
+      seccion.appendChild(myPara2);
+      section.appendChild(seccion);
 
     }
 
   </script>
 
 
- </body>
- </html>
+</body>
 
-
-
-
+</html>
